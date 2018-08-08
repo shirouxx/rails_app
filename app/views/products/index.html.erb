@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Goodbye Lalabye</h1>
-<h1>Hello<h1>
+<% if @formerproduct.present? %>
+<h2>先ほどの商品は<%= link_to "#{@formerproduct.name}",product_path(@formerproduct)%></h2>
+<% end %>
+
+
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Detail</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,6 +22,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.detail %></td>
+        <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,7 +30,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Product', new_product_path %>
