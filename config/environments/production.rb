@@ -92,3 +92,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+# I need a jungle buff,which is currently a js code
+#idk if this works or not
+ # config.assets.precompile += ['*.js']

@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
-
+<h1 id="notice"><%= notice %></h1>
+<p id="timer"> hello </p>
+  <%= javascript_include_tag 'timer.js' %>
 <h1>Goodbye Lalabye</h1>
 <% if @formerproduct.present? %>
 <h2>先ほどの商品は<%= link_to "#{@formerproduct.name}",product_path(@formerproduct)%></h2>
 <% end %>
-
-
 
 <table>
   <thead>
@@ -31,5 +30,4 @@
   </tbody>
 </table>
 <br>
-
 <%= link_to 'New Product', new_product_path %>
